@@ -81,8 +81,19 @@ body {
   text-align: center;
 }
 
-.social-icons--item {
+.social-icons--item,
+.digital-outlets-item {
   margin: 5px 10px 5px 10px;
+}
+
+.social-icons a,
+.digital-outlets a {
+  color: $accent;
+}
+
+.digital-outlets a:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 .social-icons--item:hover {
@@ -135,7 +146,7 @@ body {
   text-align: left;
   line-height: 1.5em;
   width: 70%;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 .section p {
@@ -143,7 +154,7 @@ body {
   text-align: left;
   line-height: 1.5em;
   width: 70%;
-  opacity: 0.8;
+  opacity: 0.7;
   margin-bottom: 1.5em;
 }
 
@@ -176,14 +187,18 @@ body {
 .merch-grid-col {
   background: $accent;
   margin-right: 20px;
-  border: 5px solid $light;
+
   border-radius: 3%;
   text-align: center;
+  -webkit-box-shadow: 5px 5px 0px 0px $lighttransparant;
+  -moz-box-shadow: 5px 5px 0px 0px $lighttransparant;
+  box-shadow: 5px 5px 0px 0px $lighttransparant;
 }
 
 .merch-grid-col p {
-  @include bold-font();
+  @include normal-font();
   text-transform: uppercase;
+  letter-spacing: 0.5em;
   color: $darkGreen;
   font-size: 20px;
   text-decoration: none;
@@ -210,9 +225,12 @@ body {
   justify-content: center;
 }
 
+.digital-outlets-item:hover {
+  opacity: 0.8;
+}
+
 .merch-img {
   width: 100%;
-  border: 5px solid $light;
 }
 
 .footer {
