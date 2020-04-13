@@ -122,12 +122,16 @@ AOS.init();
 $(document).ready(function () {
   var closePlayer = function closePlayer() {
     $("#music-player").fadeOut();
-    $("#show-music-player").fadeIn();
+    setTimeout(function () {
+      $("#show-music-player").fadeIn();
+    }, 500);
   };
 
   var showPlayer = function showPlayer() {
     $("#show-music-player").fadeOut();
-    $("#music-player").fadeIn();
+    setTimeout(function () {
+      $("#music-player").fadeIn();
+    }, 500);
   };
 
   $("#close-button").click(function () {
@@ -135,7 +139,13 @@ $(document).ready(function () {
   });
   $("#show-player").click(function () {
     return showPlayer();
-  });
+  }); //Stop vertical scrolling
+});
+var $body = $(document);
+$body.bind("scroll", function () {
+  if ($body.scrollLeft() !== 0) {
+    $body.scrollLeft(0);
+  }
 });
 },{}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
