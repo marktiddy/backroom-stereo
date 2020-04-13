@@ -251,14 +251,26 @@ body {
   width: 250px;
 }
 
-#close-button,
-#show-player {
+#close-button {
   text-align: center;
   color: #1c272d;
   margin-right: 5px;
   margin-bottom: 2px;
   padding: 2px;
   background: #52877b;
+  border: 0px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+#show-player {
+  text-align: center;
+  color: #1c272d;
+  margin-right: 5px;
+  margin-bottom: 2px;
+  padding: 2px;
+  background: #eceeff;
   border: 0px;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
@@ -281,9 +293,9 @@ body {
   z-index: 99;
   bottom: 0;
   right: 0;
-  background: #52877b;
+  background: #eceeff;
   margin-right: 10px;
-  border-top: 5px solid #eceeff;
+  border-top: 5px solid #52877b;
   border-radius: 5%;
   padding: 10px;
   text-align: right;
@@ -324,10 +336,15 @@ body {
 }
 
 @media only screen and (max-width: 650px) {
+  html {
+    width: 100% !important;
+    overflow-x: hidden !important;
+  }
   body {
     background: #1c272d;
     position: absolute;
     width: 100%;
+    overflow-x: hidden !important;
   }
   .container {
     background-size: cover;
@@ -365,7 +382,7 @@ body {
     font-size: 16px;
   }
   .section .first-item {
-    margin-top: 55px;
+    margin-top: 65px;
     width: 100%;
   }
   .section p {
@@ -382,23 +399,26 @@ body {
     display: grid;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    width: 100%;
+    width: 80%;
   }
   .merch-grid-col {
+    margin: 0px;
     border: 0px;
     background: #1c272d;
     margin-left: -20px;
     margin-bottom: 20px;
+    width: 90%;
   }
   .merch-grid-col p {
     text-align: center;
     color: #52877b;
+    font-size: 16px;
   }
   .digital-outlets {
     display: none;
   }
   .merch-img {
-    width: 100%;
+    width: 80%;
     border: 5px solid #eceeff;
   }
   .footer p {
