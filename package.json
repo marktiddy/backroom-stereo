@@ -1,0 +1,13 @@
+{
+  "name": "backroom-stereo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5"
+  },
+  "dependencies": {
+    "aos": "^2.3.4"
+  }
+}

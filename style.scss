@@ -1,0 +1,421 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,800&display=swap");
+
+// //colors
+
+// $lightGreen: #52877b;
+
+//Colors
+$black: #282829;
+$grey: #555556;
+$light: #eceeff;
+$accent: #52877b;
+$darkGreen: #1c272d;
+$blacktransparant: rgba(40, 40, 41, 0.9);
+$lighttransparant: rgba(236, 238, 255, 0.9);
+$accenttransparant: rgba(82, 135, 123, 0.9);
+
+$main-font: "Open Sans", sans-serif;
+
+@mixin normal-font {
+  font-family: $main-font;
+  font-weight: 400;
+}
+
+@mixin bold-font {
+  font-family: $main-font;
+  font-weight: 800;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: $darkGreen;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background: url("/img/gig.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 0;
+  text-align: center;
+}
+
+.container div {
+  padding: 20px;
+}
+.top {
+  height: 75vh;
+  background: $blacktransparant;
+}
+
+.top h1 {
+  @include bold-font();
+  color: $light;
+  text-transform: uppercase;
+  padding-top: 50px;
+  opacity: 0.8;
+  font-size: 70px;
+}
+
+.top p {
+  @include normal-font();
+  color: $accent;
+  text-transform: uppercase;
+  letter-spacing: 1em;
+  margin-top: -25px;
+  margin-bottom: 20px;
+  line-height: 1.5em;
+}
+
+.social-icons {
+  margin-top: 20px;
+  color: $accent;
+  text-align: center;
+  list-style-type: none;
+  display: inline;
+  text-align: center;
+}
+
+.social-icons--item {
+  margin: 5px 10px 5px 10px;
+}
+
+.social-icons--item:hover {
+  -webkit-animation: rotate-center 0.6s ease-in-out both;
+  animation: rotate-center 0.6s ease-in-out both;
+}
+
+.middle {
+  background: $accent;
+  clip-path: polygon(0% 0%, 100% 0, 100% 75%, 50% 100%, 0 75%);
+  position: absolute;
+  top: 80vh;
+  width: 100%;
+  height: 10vh;
+  border-top: 5px solid $lighttransparant;
+}
+
+.middle h2 {
+  color: $light;
+  @include bold-font();
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  font-size: 19px;
+}
+
+.middle a {
+  color: $accent;
+  font-size: 19px;
+  @include bold-font();
+  text-transform: uppercase;
+  padding: 5px 20px;
+  text-decoration: none;
+  background: $darkGreen;
+  border-radius: 5%;
+}
+
+.middle a:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.section {
+  color: $light;
+  background: $darkGreen;
+}
+
+.section .first-item {
+  margin-top: 110px;
+  @include normal-font();
+  text-align: left;
+  line-height: 1.5em;
+  width: 70%;
+  opacity: 0.8;
+}
+
+.section p {
+  @include normal-font();
+  text-align: left;
+  line-height: 1.5em;
+  width: 70%;
+  opacity: 0.8;
+  margin-bottom: 1.5em;
+}
+
+.merch-section {
+  margin-top: -28px;
+}
+
+.divider {
+  background: $accent;
+  clip-path: polygon(0% 0%, 100% 0, 100% 75%, 50% 100%, 0 75%);
+  width: 100%;
+  height: 10vh;
+  border-top: 5px solid $lighttransparant;
+}
+
+.divider h1 {
+  font-size: 35px;
+  margin-top: 3px;
+  @include bold-font();
+  text-transform: uppercase;
+  color: $light;
+}
+
+.merch-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 70%;
+}
+
+.merch-grid-col {
+  background: $accent;
+  margin-right: 20px;
+  border: 5px solid $light;
+  border-radius: 3%;
+  text-align: center;
+}
+
+.merch-grid-col p {
+  @include bold-font();
+  text-transform: uppercase;
+  color: $darkGreen;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.merch-grid a {
+  text-decoration: none;
+}
+
+.merch-grid-col:hover {
+  -webkit-animation: rotate-center 1s ease-in-out both;
+  animation: rotate-center 1s ease-in-out both;
+
+  cursor: pointer;
+}
+
+.digital-outlets {
+  text-align: left;
+  @include normal-font();
+  width: 80%;
+  color: $accent;
+  margin: 20px;
+  letter-spacing: 1em;
+  justify-content: center;
+}
+
+.merch-img {
+  width: 100%;
+  border: 5px solid $light;
+}
+
+.footer {
+  color: $darkGreen;
+  background: $accent;
+}
+
+.footer p {
+  @include normal-font();
+  font-size: 14px;
+  padding: 10px;
+  border-top: 5px solid $light;
+  text-align: left;
+}
+
+#music-player {
+  position: fixed;
+  z-index: 99;
+  bottom: 0;
+  right: 0;
+  background: $accent;
+  margin-right: 10px;
+  border-top: 5px solid $darkGreen;
+  border-radius: 5%;
+  text-align: right;
+  width: 250px;
+}
+
+#close-button,
+#show-player {
+  text-align: center;
+  color: $darkGreen;
+  margin-right: 5px;
+  margin-bottom: 2px;
+  padding: 2px;
+  background: $accent;
+  border: 0px;
+  @include normal-font();
+  text-transform: uppercase;
+}
+
+#close-button:hover,
+#show-player:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+#show-music-player:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+#show-music-player {
+  position: fixed;
+  z-index: 99;
+  bottom: 0;
+  right: 0;
+  background: $accent;
+  margin-right: 10px;
+  border-top: 5px solid $light;
+  border-radius: 5%;
+  padding: 10px;
+  text-align: right;
+  display: none;
+}
+
+//Animations
+
+/* ----------------------------------------------
+ * Generated by Animista on 2020-4-12 11:0:46
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation rotate-center
+ * ----------------------------------------
+ */
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+//Media rules
+@media only screen and (max-width: 650px) {
+  body {
+    background: $darkGreen;
+    position: absolute;
+    width: 100%;
+  }
+
+  .container {
+    background-size: cover;
+  }
+
+  .container div {
+    padding: 20px;
+  }
+  .top {
+    height: 60vh;
+    background: $blacktransparant;
+  }
+
+  .top h1 {
+    @include bold-font();
+    color: $light;
+    padding-top: 0px;
+    font-size: 50px;
+  }
+
+  .top p {
+    @include normal-font();
+    font-size: 14px;
+  }
+
+  .social-icons {
+    font-size: 14px;
+  }
+
+  .middle {
+    top: 60vh;
+    margin-left: -20px;
+  }
+
+  .middle h2 {
+    font-size: 16px;
+  }
+
+  .middle a {
+    font-size: 16px;
+  }
+
+  .section .first-item {
+    margin-top: 55px;
+    width: 100%;
+  }
+
+  .section p {
+    width: 100%;
+  }
+
+  .merch-section {
+    margin-top: -28px;
+  }
+
+  .divider {
+    margin-left: -20px;
+  }
+
+  .merch-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .merch-grid-col {
+    border: 0px;
+    background: $darkGreen;
+    margin-left: -20px;
+    margin-bottom: 20px;
+  }
+
+  .merch-grid-col p {
+    text-align: center;
+    color: $accent;
+  }
+
+  .digital-outlets {
+    display: none;
+  }
+
+  .merch-img {
+    width: 100%;
+    border: 5px solid $light;
+  }
+
+  .footer p {
+    @include normal-font();
+    font-size: 14px;
+    padding: 10px;
+    border-top: 5px solid $light;
+    text-align: center;
+  }
+
+  #music-player {
+    display: none;
+  }
+}
